@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react"; // Íconos de Lucide-react
 import { useAuth } from "../contexts/AuthContext";
 
 const Navbar: React.FC = () => {
-  const { logout } = useAuth(); // Función de logout desde el contexto
+  const { logout, isAuthenticated } = useAuth(); // Función de logout desde el contexto
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
                 onClick={handleLogout}
                 className="text-white hover:text-blue-400 transition-colors"
               >
-                Cerrar Sesión
+                {isAuthenticated ? 'Cerrar Sesión' : 'Iniciar Sesión'}
               </button>
             </div>
           </div>
