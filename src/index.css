@@ -1,0 +1,8 @@
+/* src/index.css */
+
+/* Importa las capas base, componentes y utilidades de Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Agrega tus estilos personalizados aquí, si es necesario */
