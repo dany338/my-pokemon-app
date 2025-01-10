@@ -23,12 +23,12 @@ describe("Navbar Component", () => {
     renderNavbar();
     expect(screen.getByText("Inicio")).toBeInTheDocument();
     expect(screen.getByText("Favoritos")).toBeInTheDocument();
-    expect(screen.getByText("Cerrar Sesión")).toBeInTheDocument();
+    expect(screen.getByText("Iniciar Sesión")).toBeInTheDocument();
   });
 
   it("should handle logout", () => {
     renderNavbar();
-    const logoutButton = screen.getByText("Cerrar Sesión");
+    const logoutButton = screen.getByText("Iniciar Sesión");
     fireEvent.click(logoutButton);
     expect(window.location.pathname).toBe("/login");
   });
